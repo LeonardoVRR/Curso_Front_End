@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <h1>Trabalhando com formularios</h1>
+
+    <form>
+        <!--Tipo Email-->
+         <label for="email">Seu email</label>
+         <input type="email" id="email" name="email" required><br><br>
+
+        <!--Tipo Text (padrão)-->
+        <label for="pnome">
+            primeiro Nome:
+        </label>
+        <input type="text" id="pnome" name="pnome" placeholder="seu primeiro nome" required><br><br> <!--o 'required' serve p/ fazer um campo ser obrigatorio-->
+
+        <label for="unome">
+            ultimo Nome:
+        </label>
+        <input type="text" id="unome" name="unome" placeholder="seu ultimo nome" required><br><br>
+
+<!--Tipo Radio-->
+
+        <label><strong>Qual é o seu nivel de programador atualmente?</strong></label><br>
+
+        <label>
+            <input type="radio" name="nivel" value="iniciante" checked>Sou iniciante
+        </label> <!--o 'value' serve p/ dizer que o valor devolvido sera iniciante, já o 'checked' é só p/ fazer a opção "Sou iniciante" começar selecionada-->
+        <label>
+            <input type="radio" name="nivel" value="medio">Comecei a pouco tempo
+        </label>
+        <label>
+            <input type="radio" name="nivel" value="avancado">Sou avançado
+        </label> <br><br>
+
+        <!--Tipo select p/ selecionar itens-->
+        <label for="escolaridade">
+            <strong>Sua escolaridade?</strong>
+        </label>
+        <select id="escolaridade" required>
+            <option selected disabled value="">Selecione</option>
+             <!--o 'selected' p/ dizer que ele vai começar como selecionado, 'disable' é p/ não deixar selecionar aquela opção, o value="" está dizendo caso aquela opção fosse selecionada ele não iria retornar nenhum valor-->
+            <option>Educação Básica</option><!--'option' serve p/ inserir um item no select que é a lista selecionavel-->
+            <option>Ensino Médio Completo</option>
+            <option>Ensino Superior</option>
+            <option>Pos-Graduação</option>
+        </select><br><br>
+
+        <!--Tipo CheckBox-->
+        <label>
+            Selecione as tecnologias que você conhece:
+        </label><br><br>
+
+        <input type="checkbox" id="tecnologia1" name="tecnologia1" value="HTML">
+        <label for="tecnologia1">HTML</label>
+
+        <input type="checkbox" id="tecnologia2" name="tecnologia2" value="CSS">
+        <label for="tecnologia2">CSS</label>
+
+        <input type="checkbox" id="tecnologia3" name="tecnologia3" value="JavaScript">
+        <label for="tecnologia3">JavaScript</label><br><br>
+
+        <!--Tipo Date-->
+        <label for="dt-nascimento">data de nascimento</label>
+        <input type="datetime-local" name="dt-nascimento" id="dt-nascimento">
+
+        <br><br><input type="submit" value="Cadastrar">
+    </form>
+</body>
+</html>
