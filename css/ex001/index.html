@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box-Sizing</title>
+    <style>
+        .sem_box-sizing {
+            background-color: red;
+            color: white;
+            width: 200px;
+            height: 200px;
+            padding: 10px;
+            border: 2px solid black;
+        }
+
+        .com_box-sizing {
+            box-sizing: border-box;
+            background-color: red;
+            color: white;
+            width: 200px;
+            height: 200px;
+            padding: 10px;
+            border: 2px solid black;
+        } 
+
+        .explicacao {
+            color: black;
+        }
+    </style>
+</head>
+<body>
+     <h1>Exemplo sem Box-Sizing</h1>
+     <div class="sem_box-sizing"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel exercitationem illo inventore dolorem reiciendis velit vero quibusdam dolorum officiis adipisci error eaque nisi numquam. Autem?</p></div>
+
+     <h1>Exemplo com Box-Sizing</h1>
+     <div class="com_box-sizing">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel exercitationem illo inventore dolorem reiciendis velit vero quibusdam dolorum officiis adipisci error eaque nisi. Autem?</p>
+        <hr>
+        <p class="explicacao">O box-sizing faz os valores do "padding" e "border" serem incorporados aos valores do width e height</p>
+     </div>
+</body>
+</html>
